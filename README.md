@@ -16,7 +16,7 @@ This service is a `NodeJS` service, So we need **NodeJS** to be installed .
 
 3. Download the code with `cart` user and install dependencies
 
-**
+**Use Git Clone**
 
 ```
 $ npm install
