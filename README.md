@@ -26,5 +26,6 @@ $ npm install
 
 ```
 # mkdir -p /var/log/robo-shop/
-# cp s
+# cp cart.service /etc/systemd/system/cart.service
+# 
 ```
