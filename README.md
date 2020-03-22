@@ -14,7 +14,7 @@ This service is a `NodeJS` service, So we need **NodeJS** to be installed .
 # useradd cart
 ```
 
-3. Download the code with 
+3. Download the code with `cart` user and 
 
 ```
 # npm install
