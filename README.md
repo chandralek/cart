@@ -18,6 +18,11 @@ This service is a `NodeJS` service, So we need **NodeJS** to be installed .
 
 **Use Git Clone**
 
+Run the next commands with following settings.
+
+User - `cart`
+Directory - `/home/cart/catalogue`
+
 ```
 $ npm install
 ```
