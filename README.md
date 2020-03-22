@@ -26,5 +26,5 @@ $ npm install
 
 ```
 # mkdir -p /var/log/robo-shop/
-# cp 
+# cp s
 ```
