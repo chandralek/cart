@@ -7,3 +7,5 @@ This service is a `NodeJS` service, So we need **NodeJS** to be installed .
 ```
 # curl -s https://raw.githubusercontent.com/linuxautomations/labautomation/master/tools/nodejs/install.sh | bash 
 ```
+
+2. 
