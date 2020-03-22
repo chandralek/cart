@@ -26,8 +26,8 @@ const counter = new promClient.Counter({
 
 var redisConnected = false;
 
-var redisHost = process.env.REDIS_HOST || 'redis'
-var catalogueHost = process.env.CATALOGUE_HOST || 'catalogue'
+var redisHost = process.env.REDIS_HOST || 'localhost'
+var catalogueHost = process.env.CATALOGUE_HOST || 'localhost'
 
 const logger = pino({
     level: 'info',
