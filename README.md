@@ -21,7 +21,7 @@ This service is a `NodeJS` service, So we need **NodeJS** to be installed .
 Run the next commands with following settings.
 
 User - `cart`
-Directory - `/home/cart/catalogue`
+Directory - `/home/cart/cart`
 
 ```
 $ npm install
