@@ -28,4 +28,6 @@ $ npm install
 # mkdir -p /var/log/robo-shop/
 # cp cart.service /etc/systemd/system/cart.service
 # systemctl daemon-reload
+# systemctl enable cart
+# systemctl start cart
 ```
