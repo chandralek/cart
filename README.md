@@ -1,1 +1,3 @@
-# CART S
+# CART Service
+
+This service is a `NodeJS` service
