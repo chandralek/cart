@@ -25,5 +25,6 @@ $ npm install
 4. Need to import cart service to the system, To manage with `systemctl`.
 
 ```
+# mkdir -p /var/log/robo-shop/
 # cp 
 ```
