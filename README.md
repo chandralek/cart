@@ -22,4 +22,4 @@ This service is a `NodeJS` service, So we need **NodeJS** to be installed .
 $ npm install
 ```
 
-4. Need to import 
+4. Need to import cart service to the system
