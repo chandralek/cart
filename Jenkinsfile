@@ -29,7 +29,7 @@ pipeline {
     stage('Upload To Nexus') {
       steps {
         sh '''
-          curl -v -u $NEXUS --upload-file cart-service-${MAJOR_VERSION}-${BUILD_NUMBER}.tgz https://nexus.devopsb46.online/repository/cart-service/cart-service-${MAJOR_VERSION}-${BUILD_NUMBER}.tgz
+          curl -f -v -u $NEXUS --upload-file cart-service-${MAJOR_VERSION}-${BUILD_NUMBER}.tgz https://nexus.devopsb46.online/repository/cart-service/cart-service-${MAJOR_VERSION}-${BUILD_NUMBER}.tgz
         '''
       }
     }
