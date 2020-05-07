@@ -18,7 +18,7 @@ pipeline{
     stage('Prepare an archive'){
       steps{
         sh '''
-      tar -cvf cart-service-${MAJOR_VERSION}-${BUILD_NUMBER}.tgz node_modules package.json server.js
+      tar -czf cart-service-${MAJOR_VERSION}-${BUILD_NUMBER}.tgz node_modules package.json server.js
       '''
       }
     }
