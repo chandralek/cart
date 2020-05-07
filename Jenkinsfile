@@ -2,10 +2,10 @@ pipeline{
   agent{
     label 'SLAVE'
   }
-   environment{
-     NEXUS=credentials('Nexus')
-     MAJOR_VERSION="1.0"
-   }
+  environment {
+    NEXUS=credentials('Nexus')
+    MAJOR_VERSION="1.0"
+  }
 
   stages{
     stage('Install all dependencies'){
