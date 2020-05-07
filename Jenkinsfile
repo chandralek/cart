@@ -1,38 +1,33 @@
-pipeline {
-
-  agent {
+pipeline{
+  agent{
     label 'SLAVE'
   }
+   environment{
+     NEXUS=credentials('Nexus')
+     MAJOR_VERSION="1.0"
+   }
 
-  environment {
-    NEXUS=credentials('Nexus')
-    MAJOR_VERSION="1.0"
-  }
-  stages {
-
-    stage('Install Npm Dependencies') {
-      steps {
+  stages{
+    stage('Install all dependencies'){
+      steps{
         sh '''
-          npm install
+        npm install
         '''
       }
     }
-
-    stage('Create Archive to Upload') {
-      steps {
+    stage('Prepare an archive'){
+      steps{
         sh '''
-          tar -czf cart-service-${MAJOR_VERSION}-${BUILD_NUMBER}.tgz node_modules package.json  server.js
-        '''
+      tar -cvf cart-service-${MAJOR_VERSION}-${BUILD_NUMBER}.tgz node_modules package.json server.js
+      '''
       }
     }
-
-    stage('Upload To Nexus') {
-      steps {
+    stage('Upload to Nexus'){
+      steps{
         sh '''
-          curl -f -v -u $NEXUS --upload-file cart-service-${MAJOR_VERSION}-${BUILD_NUMBER}.tgz https://nexus.devopsb46.online/repository/cart-service/cart-service-${MAJOR_VERSION}-${BUILD_NUMBER}.tgz
-        '''
+            curl -v -u $NEXUS --upload-file cart-service-${MAJOR_VERSION}-${BUILD_NUMBER}.tgz https://nexus.devops46.online/repository/cart-service/cart-service-${MAJOR_VERSION}-${BUILD_NUMBER}.tgz
+      '''
       }
     }
-
   }
 }
